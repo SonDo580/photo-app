@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
 
 import Photo from "./features/photo";
 import NotFound from "./components/NotFound";
+import Header from "./components/Header";
 
 import "./App.scss";
 
@@ -9,7 +10,7 @@ function App() {
   return (
     <div className="photo-app">
       <BrowserRouter>
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/photos">Main Photo Page</Link>
           </li>
@@ -19,7 +20,8 @@ function App() {
           <li>
             <Link to="/photos/123">Edit Photo Page</Link>
           </li>
-        </ul>
+        </ul> */}
+        <Header />
 
         <Routes>
           <Route path="/" loader={<Navigate to="/photos" />} />
