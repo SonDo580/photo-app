@@ -5,7 +5,7 @@ import "./Header.scss";
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <Container>
         <Row className="justify-content-between">
           <Row>

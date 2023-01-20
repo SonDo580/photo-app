@@ -1,4 +1,4 @@
-header {
+.header {
   padding: 1rem 0;
   font-size: 1.25rem;
 
@@ -10,7 +10,6 @@ header {
     color: black;
     transition: all 0.25s ease-in-out 0s;
 
-    &.active,
     &:hover {
       text-decoration: none;
       color: var(--primary);
