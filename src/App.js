@@ -24,7 +24,7 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/" loader={<Navigate to="/photos" />} />
+          <Route path="/" element={<Navigate to="/photos" />} />
           <Route path="/photos/*" element={<Photo />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
