@@ -10,8 +10,8 @@ function App() {
     <div className="photo-app">
       <BrowserRouter>
         <Routes>
-          <Route path="/photos" component={<Photo />} />
-          <Route component={<NotFound />} />
+          <Route path="/photos" element={<Photo />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
