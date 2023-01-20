@@ -17,7 +17,7 @@ function App() {
             <Link to="/photos/add">Add New Photo Page</Link>
           </li>
           <li>
-            <Link to="/photos/:id">Edit Photo Page</Link>
+            <Link to="/photos/123">Edit Photo Page</Link>
           </li>
         </ul>
 
