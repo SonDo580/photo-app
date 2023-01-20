@@ -1,6 +1,6 @@
 # photo-app
 
-- A simple app to manage photo (follow a tutorial on EasyFrontend channel)
+- A simple app to manage photo
 
 # Features:
 
@@ -18,3 +18,8 @@
 - Redux-toolkit
 - Formik
 - Reactstrap
+
+# The project is from EasyFrontend channel
+
+- I don't use lazy loading as the instructor
+- Different syntax for React-Router (new version)
