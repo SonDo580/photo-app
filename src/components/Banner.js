@@ -1,3 +1,5 @@
+import "./Banner.scss";
+
 function Banner(props) {
   const { title, backgroundUrl } = props;
 
