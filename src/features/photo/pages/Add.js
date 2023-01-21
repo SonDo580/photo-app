@@ -1,4 +1,5 @@
 import Banner from "../../../components/Banner";
+import "./Add.scss";
 
 function Add() {
   return (
