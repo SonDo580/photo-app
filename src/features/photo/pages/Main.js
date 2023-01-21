@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Container } from "reactstrap";
-import Banner from "../../../components/Banner";
-import Images from "../../../constants/images";
+
+import Banner from "components/Banner";
+import Images from "constants/images";
 
 function Main() {
   return (

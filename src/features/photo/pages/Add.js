@@ -1,4 +1,4 @@
-import Banner from "../../../components/Banner";
+import Banner from "components/Banner";
 import PhotoForm from "../components/PhotoForm";
 import "./Add.scss";
 

@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import Photo from "./features/photo";
-import NotFound from "./components/NotFound";
-import Header from "./components/Header";
+import Header from "components/Header";
+import NotFound from "components/NotFound";
+import Photo from "features/photo";
 
 import "./App.scss";
 

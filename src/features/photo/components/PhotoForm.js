@@ -1,8 +1,8 @@
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import Select from "react-select";
 
-import { PHOTO_CATEGORIES } from "../../../constants/global";
-import Images from "../../../constants/images";
+import { PHOTO_CATEGORIES } from "constants/global";
+import Images from "constants/images";
 
 function PhotoForm() {
   return (
