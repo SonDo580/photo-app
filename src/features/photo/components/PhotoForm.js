@@ -8,9 +8,10 @@ import SelectField from "customFields/SelectField";
 
 function PhotoForm() {
   return (
-    <Formik initialValues={{ title: "" }}>
+    <Formik initialValues={{ title: "", category: null }}>
       {(formikProps) => {
         const { values, errors, touched } = formikProps;
+        console.log({ values, errors, touched });
 
         return (
           <Form>
