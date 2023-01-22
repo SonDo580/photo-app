@@ -31,15 +31,6 @@ function PhotoForm() {
             />
 
             <FormGroup>
-              <Label for="category">Category</Label>
-              <Select
-                id="category"
-                name="category"
-                options={PHOTO_CATEGORIES}
-              />
-            </FormGroup>
-
-            <FormGroup>
               <Label for="photo">Photo</Label>
               <div>
                 <Button outline color="primary">
