@@ -1,10 +1,11 @@
-import { Button, FormGroup, Input, Label } from "reactstrap";
+import { Button, FormGroup, Label } from "reactstrap";
 import Select from "react-select";
+
+import { FastField, Form, Formik } from "formik";
 
 import { PHOTO_CATEGORIES } from "constants/global";
 import Images from "constants/images";
-import { FastField, Form, Formik } from "formik";
-import InputField from "./InputField";
+import InputField from "customFields/InputField";
 
 function PhotoForm() {
   return (
