@@ -1,6 +1,4 @@
 import { Button, FormGroup, Label } from "reactstrap";
-import Select from "react-select";
-
 import { FastField, Form, Formik } from "formik";
 
 import { PHOTO_CATEGORIES } from "constants/global";
