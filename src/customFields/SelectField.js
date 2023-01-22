@@ -2,7 +2,11 @@ import { FormGroup, Label } from "reactstrap";
 import Select from "react-select";
 
 function SelectField(props) {
-  const { field, label, disabled, options } = props;
+  const { field, form, label, disabled, options } = props;
+
+  const handleSelect = (selectedOption) => {
+    form.setFieldValue(field.name, selectedOption.value);
+  };
 
   return (
     <FormGroup>
@@ -12,6 +16,9 @@ function SelectField(props) {
         name={field.name}
         options={options}
         disabled={disabled}
+        value={options.find((option) => option.value === field.value)}
+        onChange={handleSelect}
+        onBlur={field.onBlur}
       />
     </FormGroup>
   );
