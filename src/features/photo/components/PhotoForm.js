@@ -6,6 +6,7 @@ import { FastField, Form, Formik } from "formik";
 import { PHOTO_CATEGORIES } from "constants/global";
 import Images from "constants/images";
 import InputField from "customFields/InputField";
+import SelectField from "customFields/SelectField";
 
 function PhotoForm() {
   return (
@@ -20,6 +21,13 @@ function PhotoForm() {
               component={InputField}
               type="text"
               label="Title"
+            />
+
+            <FastField
+              name="category"
+              component={SelectField}
+              label="Category"
+              options={PHOTO_CATEGORIES}
             />
 
             <FormGroup>
