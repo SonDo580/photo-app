@@ -1,7 +1,6 @@
 import { FormGroup, Input, Label } from "reactstrap";
 
 function InputField(props) {
-  console.log(props);
   const { field, type, label, disabled } = props;
 
   return (
