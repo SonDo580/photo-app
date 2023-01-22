@@ -2,8 +2,7 @@ import { FormGroup, Label } from "reactstrap";
 import Select from "react-select";
 
 function SelectField(props) {
-  console.log(props);
-  const { field, label, disabled } = props;
+  const { field, label, disabled, options } = props;
 
   return (
     <FormGroup>
@@ -11,7 +10,7 @@ function SelectField(props) {
       <Select
         id={field.name}
         name={field.name}
-        // options={PHOTO_CATEGORIES}
+        options={options}
         disabled={disabled}
       />
     </FormGroup>
