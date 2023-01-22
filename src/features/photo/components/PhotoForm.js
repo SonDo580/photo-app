@@ -16,12 +16,7 @@ function PhotoForm() {
 
         return (
           <Form>
-            <FastField
-              name="title"
-              component={InputField}
-              type="text"
-              label="Title"
-            />
+            <FastField name="title" component={InputField} label="Title" />
 
             <FastField
               name="category"
