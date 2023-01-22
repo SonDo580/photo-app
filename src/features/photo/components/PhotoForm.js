@@ -22,11 +22,6 @@ function PhotoForm() {
             />
 
             <FormGroup>
-              <Label for="title">Title</Label>
-              <Input name="title" id="title" />
-            </FormGroup>
-
-            <FormGroup>
               <Label for="category">Category</Label>
               <Select
                 id="category"
