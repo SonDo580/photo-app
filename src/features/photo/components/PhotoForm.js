@@ -43,7 +43,9 @@ function PhotoForm() {
             </FormGroup>
 
             <FormGroup>
-              <Button color="primary">Add to album</Button>
+              <Button type="submit" color="primary">
+                Add to album
+              </Button>
             </FormGroup>
           </Form>
         );
