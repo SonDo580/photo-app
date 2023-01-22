@@ -8,10 +8,9 @@ import InputField from "./InputField";
 
 function PhotoForm() {
   return (
-    <Formik>
+    <Formik initialValues={{ title: "" }}>
       {(formikProps) => {
         const { values, errors, touched } = formikProps;
-        console.log(formikProps);
 
         return (
           <Form>
