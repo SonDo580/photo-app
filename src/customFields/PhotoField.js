@@ -1,11 +1,14 @@
 import RandomPhoto from "components/RandomPhoto";
 import { FormGroup, Label } from "reactstrap";
 
-function PhotoField() {
+function PhotoField(props) {
+  const { field, form, label } = props;
+  const { name, value, onBlur } = field;
+
   return (
     <FormGroup>
-      <Label for="photo">Photo</Label>
-      <RandomPhoto />
+      <Label for={name}>{label}</Label>
+      <RandomPhoto name={name} imageUrl={value} onRandomButtonBlur={onBlur} />
     </FormGroup>
   );
 }
