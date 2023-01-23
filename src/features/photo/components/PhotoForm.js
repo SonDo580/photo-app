@@ -26,7 +26,7 @@ function PhotoForm() {
               options={PHOTO_CATEGORIES}
             />
 
-            <FastField name="photo" component={PhotoField} lable="Photo" />
+            <FastField name="photo" component={PhotoField} label="Photo" />
 
             <FormGroup>
               <Button type="submit" color="primary">
