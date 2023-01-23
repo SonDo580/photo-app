@@ -1,10 +1,10 @@
-import { Button, FormGroup, Label } from "reactstrap";
+import { Button, FormGroup } from "reactstrap";
 import { FastField, Form, Formik } from "formik";
 
 import { PHOTO_CATEGORIES } from "constants/global";
-import Images from "constants/images";
 import InputField from "customFields/InputField";
 import SelectField from "customFields/SelectField";
+import PhotoField from "customFields/PhotoField";
 
 function PhotoForm() {
   return (
@@ -24,22 +24,7 @@ function PhotoForm() {
               options={PHOTO_CATEGORIES}
             />
 
-            <FormGroup>
-              <Label for="photo">Photo</Label>
-              <div>
-                <Button outline color="primary">
-                  Random a Photo
-                </Button>
-              </div>
-              <div>
-                <img
-                  width="200px"
-                  height="200px"
-                  src={Images.ORANGE_BG}
-                  alt="default"
-                />
-              </div>
-            </FormGroup>
+            <FastField name="photo" component={PhotoField} lable="Photo" />
 
             <FormGroup>
               <Button type="submit" color="primary">
