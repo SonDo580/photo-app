@@ -5,7 +5,7 @@ function RandomPhoto(props) {
 
   const getRandomImageUrl = () => {
     const randomID = Math.trunc(Math.random() * 1000);
-    return `https://picsum.photos/id/${randomID}/300/300`;
+    return `https://picsum.photos/id/${randomID}/300`;
   };
 
   const handleRandomPhoto = () => {
