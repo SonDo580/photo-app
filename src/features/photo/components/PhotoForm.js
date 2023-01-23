@@ -7,7 +7,11 @@ import SelectField from "customFields/SelectField";
 import PhotoField from "customFields/PhotoField";
 
 function PhotoForm() {
-  const initialValues = { title: "", category: null };
+  const initialValues = {
+    title: "",
+    category: null,
+    photo: "https://picsum.photos/300",
+  };
 
   return (
     <Formik initialValues={initialValues}>
