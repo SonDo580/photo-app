@@ -1,18 +1,18 @@
 import { Button } from "reactstrap";
 
-function RandomPhoto() {
+function RandomPhoto(props) {
+  const { name, imageUrl, onRandomButtonBlur } = props;
+
   return (
     <div className="random-photo">
       <div className="random-photo__buton">
-        <Button outline color="primary">
+        <Button outline color="primary" name={name} onBlur={onRandomButtonBlur}>
           Random a Photo
         </Button>
       </div>
       <div className="random-photo__photo">
         <img
-          width="200px"
-          height="200px"
-          src="https://picsum.photos/id/cat/300/300"
+          src={imageUrl}
           alt="Ooops...Not found. Please click random again"
         />
       </div>
