@@ -14,7 +14,10 @@ function PhotoForm() {
   };
 
   return (
-    <Formik initialValues={initialValues}>
+    <Formik
+      initialValues={initialValues}
+      onSubmit={(values) => console.log(values)}
+    >
       {(formikProps) => {
         const { values, errors, touched } = formikProps;
         console.log({ values, errors, touched });
