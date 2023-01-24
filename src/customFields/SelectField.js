@@ -10,7 +10,7 @@ function SelectField(props) {
   const showError = errors[name] && touched[name];
 
   const handleSelect = (selectedOption) => {
-    form.setFieldValue(field.name, selectedOption.value);
+    form.setFieldValue(name, selectedOption.value);
   };
 
   return (
