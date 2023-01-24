@@ -16,7 +16,7 @@ function PhotoForm() {
 
   const validationSchema = Yup.object().shape({
     title: Yup.string().required(),
-    category: Yup.object().nullable().required(),
+    category: Yup.number().nullable().required(),
     photo: Yup.string().required(),
   });
 
