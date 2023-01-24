@@ -1,3 +1,4 @@
+import { ErrorMessage } from "formik";
 import { FormFeedback, FormGroup, Input, Label } from "reactstrap";
 
 function InputField(props) {
@@ -18,7 +19,7 @@ function InputField(props) {
         invalid={showError}
       />
 
-      {showError ? <FormFeedback>{errors[name]}</FormFeedback> : null}
+      <ErrorMessage name={name} component={FormFeedback} />
     </FormGroup>
   );
 }
