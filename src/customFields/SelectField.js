@@ -1,8 +1,13 @@
-import { FormGroup, Label } from "reactstrap";
+import { FormFeedback, FormGroup, Label } from "reactstrap";
 import Select from "react-select";
+import { ErrorMessage } from "formik";
 
 function SelectField(props) {
   const { field, form, label, disabled, options } = props;
+  const { name, value, onBlur } = field;
+  const { errors, touched } = form;
+
+  const showError = errors[name] && touched[name];
 
   const handleSelect = (selectedOption) => {
     form.setFieldValue(field.name, selectedOption.value);
@@ -10,16 +15,19 @@ function SelectField(props) {
 
   return (
     <FormGroup>
-      <Label for={field.name}>{label}</Label>
+      <Label for={name}>{label}</Label>
       <Select
-        id={field.name}
-        name={field.name}
+        id={name}
+        name={name}
         options={options}
         disabled={disabled}
-        value={options.find((option) => option.value === field.value)}
+        value={options.find((option) => option.value === value)}
         onChange={handleSelect}
-        onBlur={field.onBlur}
+        onBlur={onBlur}
+        className={showError ? "is-invalid" : ""}
       />
+
+      <ErrorMessage name={name} component={FormFeedback} />
     </FormGroup>
   );
 }
