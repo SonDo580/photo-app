@@ -11,7 +11,7 @@ function PhotoForm() {
   const initialValues = {
     title: "",
     category: null,
-    photo: "https://picsum.photos/300",
+    photo: "",
   };
 
   const validationSchema = Yup.object().shape({
