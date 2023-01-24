@@ -1,5 +1,6 @@
 import { Button, FormGroup } from "reactstrap";
 import { FastField, Form, Formik } from "formik";
+import * as Yup from "yup";
 
 import { PHOTO_CATEGORIES } from "constants/global";
 import InputField from "customFields/InputField";
@@ -13,9 +14,16 @@ function PhotoForm() {
     photo: "https://picsum.photos/300",
   };
 
+  const validationSchema = Yup.object().shape({
+    title: Yup.string().required(),
+    category: Yup.object().required(),
+    photo: Yup.string().required(),
+  });
+
   return (
     <Formik
       initialValues={initialValues}
+      validationSchema={validationSchema}
       onSubmit={(values) => console.log(values)}
     >
       {(formikProps) => {
