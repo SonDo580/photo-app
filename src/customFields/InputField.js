@@ -1,9 +1,11 @@
-import { FormGroup, Input, Label } from "reactstrap";
+import { FormFeedback, FormGroup, Input, Label } from "reactstrap";
 
 function InputField(props) {
   const { field, form, type, label, disabled } = props;
   const { name } = field;
   const { errors, touched } = form;
+
+  const showError = errors[name] && touched[name];
 
   return (
     <FormGroup>
@@ -13,9 +15,10 @@ function InputField(props) {
         type={type ? type : "text"}
         disabled={disabled}
         {...field}
+        invalid={showError}
       />
 
-      {errors[name] && touched[name] ? <p>{errors[name]}</p> : null}
+      {showError ? <FormFeedback>{errors[name]}</FormFeedback> : null}
     </FormGroup>
   );
 }
