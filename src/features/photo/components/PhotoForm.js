@@ -8,13 +8,7 @@ import SelectField from "customFields/SelectField";
 import PhotoField from "customFields/PhotoField";
 
 function PhotoForm(props) {
-  const { handleSubmit } = props;
-
-  const initialValues = {
-    title: "",
-    category: null,
-    photo: "",
-  };
+  const { handleSubmit, initialValues } = props;
 
   const validationSchema = Yup.object().shape({
     title: Yup.string().required(),
