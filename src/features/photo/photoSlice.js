@@ -90,6 +90,9 @@ const photoSlice = createSlice({
     addPhoto: (state, action) => {
       state.push(action.payload);
     },
+    removePhoto: (state, action) => {
+      state.splice(action.payload, 1);
+    },
   },
 });
 
