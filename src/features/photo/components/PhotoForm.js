@@ -23,8 +23,7 @@ function PhotoForm(props) {
       onSubmit={handleSubmit}
     >
       {(formikProps) => {
-        const { values, errors, touched, isSubmitting } = formikProps;
-        console.log({ values, errors, touched });
+        const { isSubmitting } = formikProps;
 
         return (
           <Form>
