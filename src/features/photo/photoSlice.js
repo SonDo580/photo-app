@@ -91,11 +91,11 @@ const photoSlice = createSlice({
       state.push(action.payload);
     },
     removePhoto: (state, action) => {
-      state.splice(action.payload, 1);
+      state = state.filter((photo) => photo.id !== action.payload);
     },
   },
 });
 
 const { reducer, actions } = photoSlice;
-export const { addPhoto } = actions;
+export const { addPhoto, removePhoto } = actions;
 export default reducer;
