@@ -1,10 +1,14 @@
 import Banner from "components/Banner";
+import { useDispatch } from "react-redux";
 import PhotoForm from "../components/PhotoForm";
+import { addPhoto } from "../photoSlice";
 import "./Add.scss";
 
 function Add() {
+  const dispatch = useDispatch();
+
   const handleSubmit = (values) => {
-    console.log(values);
+    dispatch(addPhoto(values));
   };
 
   return (
