@@ -1,12 +1,14 @@
 import Banner from "components/Banner";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import PhotoForm from "../components/PhotoForm";
 import { addPhoto } from "../photoSlice";
 import "./AddEdit.scss";
 
 function Add() {
+  const { id: photoID } = useParams();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
