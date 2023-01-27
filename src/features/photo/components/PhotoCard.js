@@ -2,7 +2,7 @@ import { Button } from "reactstrap";
 import "./PhotoCard.scss";
 
 function PhotoCard(props) {
-  const { photo } = props;
+  const { photo, handleRemove } = props;
 
   return (
     <div className="photo">
@@ -19,7 +19,12 @@ function PhotoCard(props) {
           </div>
 
           <div>
-            <Button outline size="sm" color="danger">
+            <Button
+              outline
+              size="sm"
+              color="danger"
+              onClick={() => handleRemove(photo.id)}
+            >
               Remove
             </Button>
           </div>
