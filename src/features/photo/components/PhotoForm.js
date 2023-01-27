@@ -1,4 +1,4 @@
-import { Button, FormGroup } from "reactstrap";
+import { Button, FormGroup, Spinner } from "reactstrap";
 import { FastField, Form, Formik } from "formik";
 import * as Yup from "yup";
 
@@ -27,7 +27,7 @@ function PhotoForm(props) {
       onSubmit={props.onSubmit}
     >
       {(formikProps) => {
-        const { values, errors, touched } = formikProps;
+        const { values, errors, touched, isSubmitting } = formikProps;
         console.log({ values, errors, touched });
 
         return (
@@ -45,6 +45,7 @@ function PhotoForm(props) {
 
             <FormGroup>
               <Button type="submit" color="primary">
+                {isSubmitting ? <Spinner /> : null}
                 Add to album
               </Button>
             </FormGroup>
