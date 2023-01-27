@@ -1,11 +1,14 @@
+import { useDispatch } from "react-redux";
 import { Col, Row } from "reactstrap";
+import { removePhoto } from "../photoSlice";
 import PhotoCard from "./PhotoCard";
 
 function PhotoList(props) {
   const { photos } = props;
+  const dispatch = useDispatch();
 
   const handleRemove = (photoID) => {
-    console.log(photoID);
+    dispatch(removePhoto(photoID));
   };
 
   return (
