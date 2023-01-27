@@ -44,7 +44,11 @@ function Add() {
       <Banner title="Pick your amazing photo" />
 
       <div className="photo-add__form">
-        <PhotoForm handleSubmit={handleSubmit} initialValues={initialValues} />
+        <PhotoForm
+          handleSubmit={handleSubmit}
+          initialValues={initialValues}
+          editMode={photoID ? true : false}
+        />
       </div>
     </div>
   );
