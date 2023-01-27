@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 import "./PhotoCard.scss";
 
@@ -14,7 +15,7 @@ function PhotoCard(props) {
         <div className="photo-actions">
           <div>
             <Button outline size="sm" color="light">
-              Edit
+              <Link to={`/photos/${photo.id}`}>Edit</Link>
             </Button>
           </div>
 
