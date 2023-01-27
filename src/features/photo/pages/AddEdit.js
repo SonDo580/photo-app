@@ -29,7 +29,7 @@ function Add() {
       // Update photo
       return new Promise((resolve) => {
         setTimeout(() => {
-          dispatch(updatePhoto({ ...values }));
+          dispatch(updatePhoto(values));
           navigate("/photos");
 
           resolve(true);
