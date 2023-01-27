@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 
-import Add from "./pages/Add";
+import AddEdit from "./pages/AddEdit";
 import Main from "./pages/Main";
 
 function Photo() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
-      <Route path="/add" element={<Add />} />
-      <Route path="/:id" element={<Add />} />
+      <Route path="/add" element={<AddEdit />} />
+      <Route path="/:id" element={<AddEdit />} />
     </Routes>
   );
 }

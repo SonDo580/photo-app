@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import PhotoForm from "../components/PhotoForm";
 import { addPhoto } from "../photoSlice";
-import "./Add.scss";
+import "./AddEdit.scss";
 
 function Add() {
   const dispatch = useDispatch();
