@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import PhotoForm from "../components/PhotoForm";
-import { addPhoto } from "../photoSlice";
+import { addPhoto, updatePhoto } from "../photoSlice";
 import "./AddEdit.scss";
 
 function Add() {
@@ -16,8 +16,6 @@ function Add() {
     state.photos.find((photo) => photo.id === Number(photoID))
   );
 
-  console.log(editPhoto);
-
   const initialValues = photoID
     ? editPhoto
     : {
@@ -27,6 +25,19 @@ function Add() {
       };
 
   const handleSubmit = (values) => {
+    if (photoID) {
+      // Update photo
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          dispatch(updatePhoto({ ...values }));
+          navigate("/photos");
+
+          resolve(true);
+        }, 2000);
+      });
+    }
+
+    // Add new photo
     const newPhoto = { ...values, id: uuidv4() };
 
     return new Promise((resolve) => {
