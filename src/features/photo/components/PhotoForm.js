@@ -8,6 +8,8 @@ import SelectField from "customFields/SelectField";
 import PhotoField from "customFields/PhotoField";
 
 function PhotoForm(props) {
+  const { handleSubmit } = props;
+
   const initialValues = {
     title: "",
     category: null,
@@ -24,7 +26,7 @@ function PhotoForm(props) {
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={props.onSubmit}
+      onSubmit={handleSubmit}
     >
       {(formikProps) => {
         const { values, errors, touched, isSubmitting } = formikProps;

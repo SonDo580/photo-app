@@ -28,7 +28,7 @@ function Add() {
       <Banner title="Pick your amazing photo" />
 
       <div className="photo-add__form">
-        <PhotoForm onSubmit={handleSubmit} />
+        <PhotoForm handleSubmit={handleSubmit} />
       </div>
     </div>
   );
