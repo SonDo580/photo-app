@@ -13,8 +13,10 @@ function Add() {
   const { id: photoID } = useParams();
 
   const editPhoto = useSelector((state) =>
-    state.photos.find((photo) => photo.id === photoID)
+    state.photos.find((photo) => photo.id === Number(photoID))
   );
+
+  console.log(editPhoto);
 
   const initialValues = photoID
     ? editPhoto
