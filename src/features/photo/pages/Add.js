@@ -10,8 +10,14 @@ function Add() {
   const navigate = useNavigate();
 
   const handleSubmit = (values) => {
-    dispatch(addPhoto(values));
-    navigate("/photos");
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        dispatch(addPhoto(values));
+        navigate("/photos");
+
+        resolve(true);
+      }, 2000);
+    });
   };
 
   return (
