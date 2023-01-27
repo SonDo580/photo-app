@@ -7,7 +7,7 @@ function PhotoList(props) {
   return (
     <Row>
       {photos.map((photo) => (
-        <Col key={photo.title} xs="12" md="6" lg="3">
+        <Col key={photo.id} xs="12" md="6" lg="3">
           <PhotoCard photo={photo} />
         </Col>
       ))}
