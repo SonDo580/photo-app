@@ -1,4 +1,5 @@
 import { Button } from "reactstrap";
+import "./PhotoCard.scss";
 
 function PhotoCard(props) {
   const { photo } = props;
