@@ -1,4 +1,5 @@
 import { Col, Row } from "reactstrap";
+import PhotoCard from "./PhotoCard";
 
 function PhotoList(props) {
   const { photos } = props;
@@ -7,7 +8,7 @@ function PhotoList(props) {
     <Row>
       {photos.map((photo) => (
         <Col key={photo.title} xs="12" md="6" lg="3">
-          photo
+          <PhotoCard photo={photo} />
         </Col>
       ))}
     </Row>
