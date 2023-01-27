@@ -13,11 +13,13 @@ function Main() {
     <div className="photo-main">
       <Banner title="Your awesome photos" backgroundUrl={Images.PINK_BG} />
 
-      <Container className="text-center">
-        <Link to="add">Add New Photo</Link>
-      </Container>
+      <Container className="text-center ">
+        <div className="py-5">
+          <Link to="add">Add New Photo</Link>
+        </div>
 
-      <PhotoList photos={photos} />
+        <PhotoList photos={photos} />
+      </Container>
     </div>
   );
 }
