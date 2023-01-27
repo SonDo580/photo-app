@@ -8,7 +8,7 @@ import SelectField from "customFields/SelectField";
 import PhotoField from "customFields/PhotoField";
 
 function PhotoForm(props) {
-  const { handleSubmit, initialValues } = props;
+  const { handleSubmit, initialValues, editMode } = props;
 
   const validationSchema = Yup.object().shape({
     title: Yup.string().required(),
@@ -42,7 +42,7 @@ function PhotoForm(props) {
             <FormGroup>
               <Button type="submit" color="primary">
                 {isSubmitting ? <Spinner /> : null}
-                Add to album
+                {editMode ? "Update photo" : "Add to album"}
               </Button>
             </FormGroup>
           </Form>
