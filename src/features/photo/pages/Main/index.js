@@ -3,8 +3,8 @@ import { Container } from "reactstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Banner from "components/Banner";
 import Images from "constants/images";
-import PhotoList from "../components/PhotoList";
-import { removePhoto } from "../photoSlice";
+import PhotoList from "../../components/PhotoList";
+import { removePhoto } from "../../photoSlice";
 
 function Main() {
   const photos = useSelector((state) => state.photos);

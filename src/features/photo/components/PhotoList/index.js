@@ -1,5 +1,5 @@
 import { Col, Row } from "reactstrap";
-import PhotoCard from "./PhotoCard";
+import PhotoCard from "../PhotoCard";
 
 function PhotoList(props) {
   const { photos, handleRemove } = props;

@@ -2,8 +2,8 @@ import Banner from "components/Banner";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import PhotoForm from "../components/PhotoForm";
-import { addPhoto, updatePhoto } from "../photoSlice";
+import PhotoForm from "../../components/PhotoForm";
+import { addPhoto, updatePhoto } from "../../photoSlice";
 import "./AddEdit.scss";
 
 function Add() {

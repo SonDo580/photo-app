@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Header from "components/Header";
-import NotFound from "components/NotFound";
+import NotFound from "components/NotFound/NotFound";
 import Photo from "features/photo";
 
 import "./App.scss";
