@@ -14,9 +14,11 @@ function PhotoCard(props) {
 
         <div className="photo-actions">
           <div>
-            <Button outline size="sm" color="light">
-              <Link to={`/photos/${photo.id}`}>Edit</Link>
-            </Button>
+            <Link to={`/photos/${photo.id}`}>
+              <Button outline size="sm" color="light">
+                Edit
+              </Button>
+            </Link>
           </div>
 
           <div>
