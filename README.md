@@ -1,6 +1,10 @@
-# photo-app
+# Photo-App
 
 - A simple app to manage photo
+
+# Live Preview
+
+https://sondo-photo-app.surge.sh/
 
 # Features:
 
@@ -22,4 +26,4 @@
 # The project is from EasyFrontend channel
 
 - I don't use lazy loading as the instructor
-- Different syntax for React-Router (new version)
+- Use different syntax for React-Router (new version)
