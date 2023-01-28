@@ -21,11 +21,14 @@ axiosClient.interceptors.request.use(
 );
 
 axiosClient.interceptors.response.use(
-  function (response) {
+  (response) => {
     // Do something with response data
+    if (response && response.data) {
+      return response.data;
+    }
     return response;
   },
-  function (error) {
+  (error) => {
     // Do something with response error
     return Promise.reject(error);
   }
