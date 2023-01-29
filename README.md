@@ -22,8 +22,10 @@ https://sondo-photo-app.surge.sh/
 - Redux-toolkit
 - Formik
 - Reactstrap
+- Axios
 
-# The project is from EasyFrontend channel
+# The project is from EasyFrontend channel (with some differences)
 
 - I don't use lazy loading as the instructor
 - Use different syntax for React-Router (new version)
+- Don't use paramsSerializer in axiosClient (option must be an object)
