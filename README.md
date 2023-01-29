@@ -23,6 +23,7 @@ https://sondo-photo-app.surge.sh/
 - Formik
 - Reactstrap
 - Axios
+- Firebase
 
 # The project is from EasyFrontend channel (with some differences)
 
