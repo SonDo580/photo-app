@@ -10,6 +10,7 @@ import "./App.scss";
 import productApi from "api/productApi";
 
 import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 
 // Configure Firebase.
 const config = {
@@ -37,6 +38,20 @@ function App() {
 
   useEffect(() => {
     fetchProducts();
+  }, []);
+
+  // Hanlde Firebase Auth state change
+  useEffect(() => {
+    const unregisterAuthObserver = firebase
+      .auth()
+      .onAuthStateChanged((user) => {
+        if (!user) {
+          console.log("User is not logged in");
+          return;
+        }
+      });
+
+    return () => unregisterAuthObserver();
   }, []);
 
   return (
