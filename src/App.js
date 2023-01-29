@@ -14,8 +14,8 @@ import "firebase/compat/auth";
 
 // Configure Firebase.
 const config = {
-  apiKey: "AIzaSyBzByci-9t91SzxOR0OBz5owj0Alq0-BF0",
-  authDomain: "photo-app-93c93.firebaseapp.com",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
 };
 firebase.initializeApp(config);
 
