@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Header from "components/Header";
 import NotFound from "components/NotFound";
 import Photo from "features/photo";
+import SignIn from "features/auth/pages/SignIn";
 
 import "./App.scss";
 import productApi from "api/productApi";
@@ -36,6 +37,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Navigate to="/photos" />} />
+          <Route path="/sign-in" element={<SignIn />} />
           <Route path="/photos/*" element={<Photo />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
