@@ -44,13 +44,18 @@ function App() {
   useEffect(() => {
     const unregisterAuthObserver = firebase
       .auth()
-      .onAuthStateChanged((user) => {
+      .onAuthStateChanged(async (user) => {
         if (!user) {
           console.log("User is not logged in");
           return;
         }
 
-        console.log("Logged-in user:", user);
+        try {
+          console.log("Logged-in user name:", user.displayName);
+          console.log("Logged-in user token:", await user.getIdToken());
+        } catch (err) {
+          console.log(err);
+        }
       });
 
     return () => unregisterAuthObserver();
