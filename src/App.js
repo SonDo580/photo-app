@@ -49,6 +49,8 @@ function App() {
           console.log("User is not logged in");
           return;
         }
+
+        console.log("Logged-in user:", user);
       });
 
     return () => unregisterAuthObserver();
