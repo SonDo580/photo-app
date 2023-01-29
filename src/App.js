@@ -9,6 +9,15 @@ import SignIn from "features/auth/pages/SignIn";
 import "./App.scss";
 import productApi from "api/productApi";
 
+import firebase from "firebase/compat/app";
+
+// Configure Firebase.
+const config = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+};
+firebase.initializeApp(config);
+
 function App() {
   const [products, setProducts] = useState([]);
 
