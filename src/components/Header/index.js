@@ -19,8 +19,8 @@ function Header() {
             </a>
           </Col>
           <Col xs="auto">
-            <NavLink to="/photos" className="header-link">
-              Redux Project
+            <NavLink to="/sign-in" className="header-link">
+              Sign In
             </NavLink>
           </Col>
         </Row>
