@@ -51,8 +51,10 @@ function App() {
         }
 
         try {
-          console.log("Logged-in user name:", user.displayName);
-          console.log("Logged-in user token:", await user.getIdToken());
+          const token = await user.getIdToken();
+          if (token) {
+            localStorage.setItem("token", await user.getIdToken());
+          }
         } catch (err) {
           console.log(err);
         }
