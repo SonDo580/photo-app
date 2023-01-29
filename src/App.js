@@ -13,8 +13,13 @@ function App() {
 
   const fetchProducts = async () => {
     try {
-      const response = productApi.getAll();
-      console.log(response);
+      const params = {
+        _page: 1,
+        _limit: 10,
+      };
+
+      const response = await productApi.getAll(params);
+      setProducts(response.data);
     } catch (err) {
       console.log("Failed to fetch product list: ", err);
     }
