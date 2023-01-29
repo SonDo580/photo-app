@@ -6,13 +6,21 @@ import NotFound from "components/NotFound";
 import Photo from "features/photo";
 
 import "./App.scss";
+import productApi from "api/productApi";
 
 function App() {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const fetchProducts = async () => {};
+  const fetchProducts = async () => {
+    try {
+      const response = productApi.getAll();
+      console.log(response);
+    } catch (err) {
+      console.log("Failed to fetch product list: ", err);
+    }
+  };
 
+  useEffect(() => {
     fetchProducts();
   }, []);
 
