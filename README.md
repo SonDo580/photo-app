@@ -1,12 +1,12 @@
 # Photo-App
 
-- A simple app to manage photo
+- A simple app to manage photo (from EasyFrontend youtube channel)
 
 # Live Preview
 
 https://sondo-photo-app.surge.sh/
 
-# Features:
+# Features
 
 - Show list of photos
 - Filter by category
@@ -15,7 +15,7 @@ https://sondo-photo-app.surge.sh/
 - Remove photo
 - Persist data (use localStorage)
 
-# Technologies used:
+# Technologies used
 
 - ReactJS
 - React Router
@@ -25,7 +25,7 @@ https://sondo-photo-app.surge.sh/
 - Axios
 - Firebase
 
-# The project is from EasyFrontend channel (with some differences)
+# Note
 
 - I don't use lazy loading as the instructor
 - Use different syntax for React-Router (new version)
